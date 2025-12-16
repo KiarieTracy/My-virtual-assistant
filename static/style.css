@@ -1,138 +1,127 @@
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f6f8;
     color: #333;
-    background-color: #f9fafb;
 }
 
-header {
-    background-color: #1e293b;
-    color: white;
-    padding: 1em 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
+/* Navigation */
 nav {
+    background: #1f2933;
+    padding: 20px;
+}
+
+nav h1 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 85%;
-    margin: 0 auto;
+    gap: 20px;
 }
 
-    nav h1 {
-        font-size: 1.5rem;
-    }
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1.5em;
-    }
+nav a:hover {
+    text-decoration: underline;
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
+/* Sections */
+section {
+    padding: 60px 10%;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
-
+/* Hero section */
 .hero {
+    background: linear-gradient(120deg, #2563eb, #1e40af);
+    color: #ffffff;
     text-align: center;
-    padding: 5em 1em;
-    background: linear-gradient(135deg, #38bdf8, #2563eb);
-    color: white;
 }
 
-    .hero h2 {
-        font-size: 2.5rem;
-    }
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
 
-    .hero p {
-        font-size: 1.2rem;
-        margin-top: 1em;
-    }
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
 
 .btn {
-    background-color: white;
-    color: #2563eb;
-    padding: 0.75em 1.5em;
+    display: inline-block;
+    background: #ffffff;
+    color: #1e40af;
+    padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 1.5em;
-    display: inline-block;
 }
 
-    .btn:hover {
-        background-color: #f1f5f9;
-    }
-
-section {
-    width: 85%;
-    margin: 3em auto;
-    text-align: center;
+.btn:hover {
+    background: #e5e7eb;
 }
 
+/* Tasks */
 .task-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5em;
-    margin-top: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 .task-card {
-    background-color: white;
-    padding: 1.5em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out;
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-    .task-card:hover {
-        transform: translateY(-5px);
-    }
-
-footer {
-    background-color: #1e293b;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-    margin-top: 3em;
-}
+/* Contact form */
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
     max-width: 500px;
-    margin: 2em auto;
 }
 
-    .contact-form input,
-    .contact-form textarea {
-        padding: 0.8em;
-        border: 1px solid #cbd5e1;
-        border-radius: 5px;
-        font-size: 1rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
-        }
-
-.success-message {
-    color: green;
-    font-weight: bold;
-    margin-top: 1em;
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
+
+.contact-form button {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #1e40af;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f2933;
+    color: #ffffff;
+}
+
