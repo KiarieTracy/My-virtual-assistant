@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Virtual Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Virtual Assistant Pro</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Helping You Stay Ahead</h2>
+        <p>Strategic planning, organization, and execution — all handled for you.</p>
+        <a href="#contact" class="btn">Let’s Get Started</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I’m your dedicated virtual assistant — managing your calendar, emails, meetings, and marketing strategies, so you can focus on growth and leadership.</p>
+    </section>
+
+    <section id="tasks">
+        <h2>What I Do</h2>
+        <div class="task-list">
+            <div class="task-card">
+                <h3>🗓️ Calendar & Email Management</h3>
+                <p>Scheduling, inbox organization, and meeting coordination done right.</p>
+            </div>
+            <div class="task-card">
+                <h3>📈 Marketing & Branding</h3>
+                <p>Content planning, social media management, and brand placement strategies.</p>
+            </div>
+            <div class="task-card">
+                <h3>📊 Research & Reports</h3>
+                <p>Market research, competitor analysis, and professional report writing.</p>
+            </div>
+            <div class="task-card">
+                <h3>✅ Project Coordination</h3>
+                <p>Task allocation and execution tracking to keep everything on schedule.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s turn your vision into results. Reach out today!</p>
+    
+    <form action="/contact" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message or Consultation Request" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    {% if success %}
+        <p class="success-message">{{ success }}</p>
+    {% endif %}
+</section>
+
+
+    <footer>
+        <p>© 2025 Virtual Assistant Pro | Designed with ❤️ by Tracey</p>
+    </footer>
+</body>
+</html>
+
