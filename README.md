@@ -1,7 +1,7 @@
 # Virtual Assistant Web Application
 
 
-#### Video Demo:[<URL HERE>](https://youtu.be/AeikmmaovvU)
+#### 📁🎥Video Demo: [Watch here](https://youtu.be/AeikmmaovvU)
 ## 📌 Description
 This project is a web-based **Virtual Assistant platform** designed to help professionals, entrepreneurs, and executives manage essential administrative and strategic tasks. The assistant supports planning, organization, communication, and marketing-related activities that happen behind the scenes of successful leadership.
 
