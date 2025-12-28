@@ -7,16 +7,6 @@ from flask import render_template
 from VirtualAssistant import app
  
 @app.route('/') 
-@app.route('/intro')
-def intro():
-  """Return the intro page."""
-  return render_template(
-   'intro.html'
-    title='Intro',
-    year=datetime.now().year,
-    message='Your Introduction page.'
-)
-
 @app.route('/home')
 def home():
     """Renders the home page."""
@@ -45,5 +35,15 @@ def about():
         year=datetime.now().year,
         message='Your application description page.'
     )
- 
+
+
+@app.route('/intro')
+def intro():
+  """Return the intro page."""
+  return render_template(
+   'intro.html'
+    title='Intro',
+    year=datetime.now().year,
+    message='Your Introduction page.'
+)
 
