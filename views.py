@@ -14,6 +14,8 @@ def intro():
         'index.html',
         title='Intro Page'
         year=datetime.now()year,
+                           )
+ 
 @app.route('/home')
 def home():
     """Renders the home page."""
