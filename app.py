@@ -2,9 +2,6 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route("/")
-def intro():
-    return render_template("intro.html")
 
 @app.route("/")
 def index():
@@ -19,6 +16,11 @@ def contact():
     print(f"📩 Message from {name} ({email}): {message}")
 
     return render_template("index.html", success="Message sent successfully!")
+
+@app.route("/")
+def intro():
+    return render_template("intro.html")
+
 
 if __name__ == "__main__":
     app.run()
