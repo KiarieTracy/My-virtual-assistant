@@ -17,9 +17,6 @@ def contact():
 
     return render_template("index.html", success="Message sent successfully!")
 
-@app.route("/")
-def intro():
-    return render_template("intro.html")
 
 
 if __name__ == "__main__":
