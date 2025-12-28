@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/")
+def intro():
+    return render_template("intro.html")
+
 @app.route("/contact", methods=["POST"])
 def contact():
     name = request.form.get("name")
