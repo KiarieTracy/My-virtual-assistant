@@ -36,4 +36,13 @@ def about():
         message='Your application description page.'
     )
  
+@app.route('/intro')
+def intro():
+  """Return the intro page."""
+  return render_template(
+   'intro.html'
+    title='Intro',
+    year=datetime.now().year,
+    message='Your Introduction page.'
+)
 
