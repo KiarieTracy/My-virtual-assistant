@@ -4,12 +4,12 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def index():
-    return render_template("index.html")
-
-@app.route("/")
 def intro():
     return render_template("intro.html")
+
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 @app.route("/contact", methods=["POST"])
 def contact():
